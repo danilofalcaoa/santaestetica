@@ -1219,17 +1219,13 @@ ul, ol { list-style: none; }
 }
 
 .faq-item__resposta {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
 .faq-item.open .faq-item__resposta {
-  grid-template-rows: 1fr;
-}
-
-.faq-item__resposta > * {
-  overflow: hidden;
+  max-height: 600px;
 }
 
 .faq-item__resposta p {
